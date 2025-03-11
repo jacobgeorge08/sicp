@@ -39,9 +39,7 @@
 
 (define (co-prime-product a b)
   (define (co-prime a)
-    (if (= 1 (gcd a b))
-        #t
-        #f))
+    (= 1 (gcd a b)))
   (filter-acc-i * 1 identity a inc b co-prime))
 
 (co-prime-product 1 50)
