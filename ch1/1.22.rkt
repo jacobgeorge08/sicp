@@ -49,4 +49,5 @@
 (search-for-primes 1000000 1000050)
 
 
+(timed-prime-test 1000000021)
 
