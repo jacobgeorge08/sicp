@@ -22,9 +22,7 @@
         (/(n c) (+ (d c)(cont-frac-helper (+ 1 c))))))
   (cont-frac-helper 1))
 
-(define (always-one x)
-  1.0)
-(cont-frac always-one always-one 11)
+(cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 11)
 ;; Takes 11 iterations to get 4 deciamal places accuracy
 
 
@@ -34,4 +32,6 @@
         result
         (iter (- c 1)(/ (n c)(+ (d c) result)))))
   (iter k 0))
-(cont-iter always-one always-one 11)
+
+(cont-iter (lambda (i) 1.0) (lambda (i) 1.0) 11)
+
