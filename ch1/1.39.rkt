@@ -2,7 +2,6 @@
 
 (define (square x) (* x x))
 
-#| (define pi (3.14159265359)) |#
 
 (define (cont-frac n d k)
   (define (cont-frac-helper c)
