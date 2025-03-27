@@ -6,9 +6,9 @@
 (define (square-list items)
   (if (null? items)
       nil
-      (cons (square (car items)) (square-list_ (cdr items)))))
+      (cons (square (car items)) (square-list (cdr items)))))
 
-(define (square-list items)
+(define (square-list_ items)
   (map square items))
 
 (square-list (list 1 2 3 4))
