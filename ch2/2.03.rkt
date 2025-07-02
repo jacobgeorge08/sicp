@@ -23,8 +23,10 @@
   (* (car rect) (cdr rect)))
 
 (define (segment-rectangle l-seg b-seg)
-  (let ((l (- (x-point(end-segment l-seg)) (x-point(start-segment l-seg))))
-        (b (- (y-point(end-segment b-seg)) (y-point(start-segment b-seg)))))
+  (let ((l (abs (- (x-point (end-segment l-seg))
+                   (x-point (start-segment l-seg)))))
+        (b (abs (- (y-point (end-segment b-seg))
+                   (y-point (start-segment b-seg))))))
     (cons l b)))
 
 (define seg1 (make-segment (make-point 1 2) (make-point 6 2)))
@@ -38,4 +40,7 @@
     (cons l b)))
 
 (define point-rect (point-rectange (make-point 1 2)(make-point 6 2)(make-point 6 2)(make-point 6 5)))
+
+(perimeter point-rect)
+(area point-rect)
 

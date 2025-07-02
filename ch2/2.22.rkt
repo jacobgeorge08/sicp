@@ -22,5 +22,5 @@
 
 ;; For the 2nd half of the question, we are constructing a pair with a bigger and bigger initial element and we get this weird dotted notation nested mess
 ;;
-;; While for the first answer we are constructing a list by consing an element with a list like we were meant to do 
+;; While for the first answer we are constructing a list by consing an element with a list like we were meant to do
 ;; a list is just cons glued together btw
