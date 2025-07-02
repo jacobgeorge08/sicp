@@ -1,7 +1,7 @@
 #lang sicp
 
 (define (double x)
-  (* 2 x))
+  (+ x x))
 
 (define (half x)
   (/ x 2))
