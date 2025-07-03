@@ -16,9 +16,21 @@
                                (cons (dreverse (car remaining)) result)))))
   (dreverse-iter items nil))
 
+(define (reverse items)
+  (if (null? items)
+      nil
+      (append (reverse (cdr items)) (list (car items)))))
+
+(define (map-reverse x)
+  (if (pair? x)
+      (map map-reverse (reverse x))
+      x))
+
 x
 (deep-reverse x)
 (dreverse x)
+(map-reverse x)
 y
 (deep-reverse y)
 (dreverse y)
+(map-reverse y)
