@@ -46,17 +46,6 @@
                              result-list)))))
   (copy-to-list tree '()))
 
-(define (tree-list2 tree)
-  (define (copy tree result)
-    (if (null? tree)
-        result
-        (copy (left-branch tree)
-              (cons (entry tree)
-                    (copy
-                     (right-branch tree)
-                     result)))))
-  (copy tree '()))
-
 (define t1 '(7 (3 (1 () ()) (5 () ())) (9 () (11 () ()))))
 (define t2 '(3 (1 () ()) (7 (5 () ()) (9 () (11 () ())))))
 (define t3 '(5 (3 (1 () ()) ()) (9 (7 () ()) (11 () ()))))
