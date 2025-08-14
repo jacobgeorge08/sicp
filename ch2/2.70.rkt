@@ -1,4 +1,4 @@
-#lang racket
+#lang sicp
 
 (define (make-leaf symbol weight) (list 'leaf symbol weight))
 (define (leaf? object) (equal? (car object) 'leaf))
